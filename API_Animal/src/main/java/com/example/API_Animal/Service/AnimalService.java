@@ -77,9 +77,5 @@ public class AnimalService {
     public void deleteById(String id){
         animalRepository.deleteById(id);
     }
-
-    public Animal inserirTeste(Animal animal){
-        return animalRepository.save(animal);
-    }
 }
 

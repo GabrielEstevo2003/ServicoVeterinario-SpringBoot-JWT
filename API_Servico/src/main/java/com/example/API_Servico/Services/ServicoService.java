@@ -65,10 +65,6 @@ public class ServicoService {
         }
     }
 
-    public Servico inserirTeste(Servico servico){
-        return servicoRepository.save(servico);
-    }
-
     public boolean verificarDonoExiste(String donoId, String token) {
         String url = "http://localhost:8084/sistema-veterinario/dono/" + donoId;
         HttpHeaders headers = new HttpHeaders();

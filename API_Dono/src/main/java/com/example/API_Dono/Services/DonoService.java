@@ -97,10 +97,5 @@ public class DonoService {
         donoRepository.deleteById(id);
     }
 
-    public Dono inserirTeste(Dono dono, String cep){
-        Endereco endereco = viaCepService.buscarEnderecoPorCEP(cep);
-        dono.setEndereco(endereco);
-        return donoRepository.save(dono);
-    }
 }
 

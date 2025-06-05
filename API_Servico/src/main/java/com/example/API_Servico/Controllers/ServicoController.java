@@ -37,13 +37,6 @@ public class ServicoController {
         return ResponseEntity.status(HttpStatus.CREATED).body(novo);
     }
 
-    @PostMapping("/popular")
-    public ResponseEntity<?> insertTest(@RequestBody Servico servico){
-
-        Servico novo = servicoService.inserirTeste(servico);
-        return ResponseEntity.status(HttpStatus.CREATED).body(novo);
-    }
-
     @PutMapping("/{id}")
     public ResponseEntity<?> atualizarServico(@PathVariable String id,
                                               @RequestBody Servico servicoAtualizado,

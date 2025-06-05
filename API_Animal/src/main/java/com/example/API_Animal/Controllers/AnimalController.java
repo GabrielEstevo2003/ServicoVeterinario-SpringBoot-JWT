@@ -36,14 +36,6 @@ public class AnimalController {
         return ResponseEntity.status(HttpStatus.CREATED).body(novo);
     }
 
-    @PostMapping("/popular")
-    public ResponseEntity<?> insertTest(@RequestBody Animal animal){
-
-
-        Animal novo = animalService.inserirTeste(animal);
-        return ResponseEntity.status(HttpStatus.CREATED).body(novo);
-    }
-
     @PutMapping("/{id}")
     public ResponseEntity<?> atualizarAnimal(@PathVariable String id,
                                              @RequestBody Animal animalAtualizado,

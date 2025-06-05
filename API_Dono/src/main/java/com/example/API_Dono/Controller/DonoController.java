@@ -42,13 +42,6 @@ public class DonoController {
         return ResponseEntity.status(HttpStatus.CREATED).body(novo);
     }
 
-    @PostMapping("/popular")
-    public ResponseEntity<?> insertTest(@RequestBody Dono dono, @RequestParam String cep) {
-
-        Dono novo = donoService.inserirTeste(dono, cep);
-        return ResponseEntity.status(HttpStatus.CREATED).body(novo);
-    }
-
     @PutMapping("/{id}")
     public ResponseEntity<?> updateDono(@PathVariable String id,
                                         @RequestBody Dono donoAtualizado,
