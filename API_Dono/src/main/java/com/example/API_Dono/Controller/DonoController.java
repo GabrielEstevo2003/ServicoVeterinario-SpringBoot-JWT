@@ -60,7 +60,7 @@ public class DonoController {
         }
 
         if (!donoService.verificarAnimalExiste(donoAtualizado.getIdAnimal(), token)) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Animal informado não existe");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Animal inexistente");
         }
 
         Endereco endereco = viaCepService.buscarEnderecoPorCEP(cep);
